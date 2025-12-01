@@ -30,9 +30,14 @@ app.get('/',(req,res)=>{
 
     // locales object
     // ALWAYS AN OBJECT
-    res.render('home.ejs',{language: 'JavaScript', teacher: 'Denis' })
+    res.render('home.ejs',{language: 'JavaScript', teacher: 'denis' })
 })
 
+
+app.get('/students',(req,res)=>{
+    
+    res.render('students.ejs',{students: students})
+})
 
 
 
