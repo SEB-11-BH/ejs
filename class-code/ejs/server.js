@@ -2,7 +2,12 @@
 const express = require("express") //importing express package
 const app = express() // creates an express application
 app.use(express.static('public')) // serves all static files from public folder
+require('dotenv').config() // allows us to use the .env variables
 
+
+// process.env.ENVIRONMENT_VARIABLE
+console.log(process.env.SUPER_SECRET_PASSWORD)
+console.log(process.env.API_KEY)
 
 // Database
 const students = [
