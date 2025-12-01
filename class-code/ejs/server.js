@@ -58,7 +58,7 @@ app.get('/students/:id',(req,res)=>{
 
 
 
-const shoppingCart = [
+const catalog = [
     {
         name: "Laptop",
         price: 1200,
@@ -82,7 +82,10 @@ const shoppingCart = [
 ];
 
 
-// 
+// write a dynamic route for this catalog array
+// /catalog/:name
+// assume the name is unique
+// when the user sends a request to the url it should display a item.ejs page that contains the price and name
 
 
 // Routes go here:
