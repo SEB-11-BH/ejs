@@ -9,7 +9,7 @@
     <h1>Students</h1>
 
     <% students.forEach(function(oneStudent){ %>
-        <p>name: <%= oneStudent.name %> </p>
+        <a href="/students/<%= oneStudent.id %>">name: <%= oneStudent.name %></a>
     <% }) %>
 </body>
 </html>

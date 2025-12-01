@@ -35,24 +35,54 @@ app.get('/',(req,res)=>{
 
 
 app.get('/students',(req,res)=>{
-    
+    console.log(students)
     res.render('students.ejs',{students: students})
 })
 
 
-
-app.get('/students/:studentId',(req,res)=>{
+// for displaying 1 resource
+app.get('/students/:id',(req,res)=>{
+    console.log('student details route')
     console.log(req.params)
+
     
-    res.render('student-details.ejs')
+    const foundStudent = students.find((oneStudent)=>{
+    return oneStudent.id == req.params.id
+    }) // this returns the student with id same as req.params.id
+
+    console.log(foundStudent)
+    
+    res.render('student-details.ejs',foundStudent)
 })
 
 
-app.get('/:username',(req,res)=>{
-    console.log(req.params)
-    res.render('student-details.ejs')
-})
 
+
+const shoppingCart = [
+    {
+        name: "Laptop",
+        price: 1200,
+        shipsToBahrain: true
+    },
+    {
+        name: "Smartphone",
+        price: 800,
+        shipsToBahrain: false
+    },
+    {
+        name: "Headphones",
+        price: 150,
+        shipsToBahrain: true
+    },
+    {
+        name: "Smartwatch",
+        price: 300,
+        shipsToBahrain: false
+    }
+];
+
+
+// 
 
 
 // Routes go here:
