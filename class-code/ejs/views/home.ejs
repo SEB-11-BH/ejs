@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+</head>
+<body>
+    <h1>Welcome to my website</h1>
+    <!-- output tag -->
+    <p> <%= language %> </p>
+
+    <!-- scriplet tag -->
+     <% if(teacher === 'Omar') {%>
+        <p>We are teaching week 1 with <%= teacher %></p>
+     <% } else if(teacher === 'Denis'){ %>
+        <p>We are teaching Week 2 with <%= teacher %></p>
+     <% } %>
+    <p>Teacher: <%= teacher %> </p>
+</body>
+</html>
